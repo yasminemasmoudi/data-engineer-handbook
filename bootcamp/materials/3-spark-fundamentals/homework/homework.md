@@ -9,13 +9,13 @@
 - medals
   - a row for every medal type 
 
-
 Your goal is to make the following things happen:
 
 - Build a Spark job that
   - Disabled automatic broadcast join with `spark.conf.set("spark.sql.autoBroadcastJoinThreshold", "-1")`
   - Explicitly broadcast JOINs `medals` and `maps`
   - Bucket join `match_details`, `matches`, and `medal_matches_players` on `match_id` with `16` buckets
+  
   - Aggregate the joined data frame to figure out questions like:
     - Which player averages the most kills per game?
     - Which playlist gets played the most?
